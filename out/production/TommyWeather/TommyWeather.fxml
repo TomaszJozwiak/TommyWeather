@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="893.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="83.0" prefWidth="1024.0">
+         <children>
+            <Label alignment="CENTER" text="TommyWeather">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/sun.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </HBox>
+      <SplitPane dividerPositions="0.5" prefHeight="188.0" prefWidth="1024.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="249.0" prefWidth="508.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="200.0" layoutY="85.0" text="Państwo" textAlignment="CENTER" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+                  <TextField fx:id="cityTextField1" layoutX="30.0" layoutY="187.0" prefHeight="25.0" prefWidth="372.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <Label alignment="CENTER" layoutX="200.0" layoutY="162.0" text="Miasto" textAlignment="CENTER" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+                  <Label alignment="CENTER" layoutX="240.0" layoutY="46.0" text="Miasto 1" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="countryChoiceBox1" layoutX="176.0" layoutY="92.0" prefWidth="150.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="errorLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="233.0" layoutY="93.0" textFill="RED" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="155.0" layoutY="34.0" text="Miasto 2" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="258.0" layoutY="115.0" text="Państwo" textAlignment="CENTER" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+                  <TextField fx:id="cityTextField2" layoutX="187.0" layoutY="175.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <Label alignment="CENTER" layoutX="240.0" layoutY="135.0" text="Miasto" textAlignment="CENTER" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+                  <ChoiceBox fx:id="countryChoiceBox2" layoutX="179.0" layoutY="93.0" prefWidth="150.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="errorLabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="93.0" textFill="RED" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <HBox alignment="CENTER" prefHeight="67.0" prefWidth="1024.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="83.0" prefWidth="107.0">
+               <children>
+                  <Button fx:id="displayButton" alignment="CENTER" mnemonicParsing="false" onAction="#displayWeather" text="Wyświetl" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <SplitPane dividerPositions="0.5" prefHeight="67.0" prefWidth="1024.0" style="-fx-background-color: gray;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="cityLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="cityLabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Separator prefWidth="200.0" />
+      <SplitPane dividerPositions="0.5" prefHeight="90.0" prefWidth="1024.0" style="-fx-background-color: silver;">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="city1icon1" fitHeight="70.0" fitWidth="70.0" layoutX="-12.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Label fx:id="city1clouds1" layoutX="134.0" layoutY="23.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city1temperature1" layoutX="134.0" layoutY="64.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="120.0" />
+                  <Label fx:id="city1wind1" contentDisplay="RIGHT" layoutX="306.0" layoutY="23.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city1pressure1" contentDisplay="RIGHT" layoutX="306.0" layoutY="56.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="city1date1" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="7.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="city2icon1" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Label fx:id="city2clouds1" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city2temperature1" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="120.0" />
+                  <Label fx:id="city2wind1" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city2pressure1" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="city2date1" alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="10.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="7.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+      <Separator prefWidth="200.0" />
+      <SplitPane dividerPositions="0.5" prefHeight="90.0" prefWidth="1024.0" style="-fx-background-color: silver;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="city1icon2" fitHeight="70.0" fitWidth="70.0" layoutX="-12.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Label fx:id="city1clouds2" layoutX="134.0" layoutY="23.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city1temperature2" layoutX="134.0" layoutY="64.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="120.0" />
+                  <Label fx:id="city1wind2" layoutX="306.0" layoutY="23.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city1pressure2" layoutX="306.0" layoutY="56.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="city1date2" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="7.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="city2icon2" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Label fx:id="city2clouds2" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city2temperature2" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="120.0" />
+                  <Label fx:id="city2wind2" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city2pressure2" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="city2date2" alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="10.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="7.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Separator prefWidth="200.0" />
+      <SplitPane dividerPositions="0.5" prefHeight="90.0" prefWidth="1024.0" style="-fx-background-color: silver;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="city1icon3" fitHeight="70.0" fitWidth="70.0" layoutX="-12.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Label fx:id="city1clouds3" layoutX="134.0" layoutY="23.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city1temperature3" layoutX="134.0" layoutY="64.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="120.0" />
+                  <Label fx:id="city1wind3" layoutX="306.0" layoutY="23.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city1pressure3" layoutX="306.0" layoutY="56.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="city1date3" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="7.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="city2icon3" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Label fx:id="city2clouds3" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city2temperature3" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="120.0" />
+                  <Label fx:id="city2wind3" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city2pressure3" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="city2date3" alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="10.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="7.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Separator prefWidth="200.0" />
+      <SplitPane dividerPositions="0.5" prefHeight="90.0" prefWidth="1024.0" style="-fx-background-color: silver;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="city1icon4" fitHeight="70.0" fitWidth="70.0" layoutX="-12.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Label fx:id="city1clouds4" layoutX="134.0" layoutY="23.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city1temperature4" layoutX="134.0" layoutY="64.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="120.0" />
+                  <Label fx:id="city1wind4" layoutX="306.0" layoutY="23.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city1pressure4" layoutX="306.0" layoutY="56.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="city1date4" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="7.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="city2icon4" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Label fx:id="city2clouds4" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city2temperature4" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="120.0" />
+                  <Label fx:id="city2wind4" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city2pressure4" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="city2date4" alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="10.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="7.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Separator prefWidth="200.0" />
+      <SplitPane dividerPositions="0.5" prefHeight="90.0" prefWidth="1024.0" style="-fx-background-color: silver;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="city1icon5" fitHeight="70.0" fitWidth="70.0" layoutX="-12.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Label fx:id="city1clouds5" layoutX="120.0" layoutY="36.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="36.0" />
+                  <Label fx:id="city1temperature5" layoutX="134.0" layoutY="64.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="120.0" />
+                  <Label fx:id="city1wind5" layoutX="306.0" layoutY="23.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city1pressure5" layoutX="306.0" layoutY="56.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="city1date5" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="7.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="city2icon5" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Label fx:id="city2clouds5" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city2temperature5" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="120.0" />
+                  <Label fx:id="city2wind5" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+                  <Label fx:id="city2pressure5" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
+                  <Label fx:id="city2date5" alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="10.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="7.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <HBox alignment="CENTER" prefHeight="53.0" prefWidth="1024.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="83.0" prefWidth="107.0">
+               <children>
+                  <Button fx:id="exitButton" alignment="CENTER" mnemonicParsing="false" onAction="#exit" text="Wyjście" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
